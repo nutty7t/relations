@@ -91,3 +91,17 @@ simplified?
 > $t(X)(Y)$ only makes sense when $Y \subseteq X$. It can be simplified to
 > $t(Y)$.
 
+## Exercise 1.4
+
+**(a)** Can the union of two keys be a key?
+
+> Only if both of the keys are equivalent. Otherwise, the union will result in
+> a superkey that is not minimal.
+
+**(b)** Is the intersection of two superkeys necessarily a key?
+
+> No, it can result in a set of attributes that is not a superkey. Consider the
+> scheme in Exercise 1.2. Let $K_1 = \{$ `FLIGHT-NUMBER`, `DATE` $\}$ and $K_2
+> = \{$ `DATE`, `GATE`, `TIME` $\}$. Both $K_1$ and $K_2$ are superkeys, but
+> $K_1 \cap K_2 = \{$ `DATE` $\}$, which does not uniquely identify tuples.
+
