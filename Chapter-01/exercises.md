@@ -146,3 +146,19 @@ dom(B_i)$, $1 \leq i \leq m$. Is this change operation necessarily legal?
 >    the relation since no tuple in $r$ has $K$-value $\langle e_1 e_2 ... e_m
 >    \rangle$.
 
+## Exercise 1.8
+
+Let $\Sigma$ be a sequence of update operations to be applied to relation $r$.
+If the order of the operations is changed in $\Sigma$, will the result
+necessarily be the same when $\Sigma$ consists of
+
+**(a)** only add operations? `YES`
+
+**(b)** only delete operations? `YES`
+
+**\(c\)** add and delete operations? `NO (deleting the added tuple)`
+
+**(d)** add and change operations? `NO (changing the added tuple)`
+
+**(e)** only change operations? `NO (targeting a changed tuple)`
+
