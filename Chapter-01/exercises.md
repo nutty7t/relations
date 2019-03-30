@@ -42,21 +42,21 @@ relation for part (a):
 1. Ruskin and Raphael complete their second year.
 
 ```
-CHANGE (R; Employee=Ruskin; Salary=$14,520.00, Years-Worked=2)
-CHANGE (R; Employee=Raphael; Salary=$14,520.00, Years-Worked=2)
+CHANGE(r; Employee=Ruskin; Salary=$14,520.00, Years-Worked=2)
+CHANGE(r; Employee=Raphael; Salary=$14,520.00, Years-Worked=2)
 ```
 
 2. Rice quits.
 
 ```
-DELETE (R; Employee=Rice)
+DELETE(r; Employee=Rice)
 ```
 
 3. Powell quits. His duties are assumed by Porter.
 
 ```
-DELETE (R; Employee=Powell)
-CHANGE (R; Employee=Porter; Job=Chief of Operations/Head of Ground Crews)
+DELETE(r; Employee=Powell)
+CHANGE(r; Employee=Porter; Job=Chief of Operations/Head of Ground Crews)
 
 The CHANGE operation makes the relation break first normal form (1NF) because
 now the domain of the JOB attribute does not contain atomic values.
@@ -65,7 +65,7 @@ now the domain of the JOB attribute does not contain atomic values.
 4. Randolph is hired as a ticket agent.
 
 ```
-ADD (R; Employee=Randolph, Manager=Price, Job=Ticket Agent, Salary=$12,000.00, Years-Worked=0)
+ADD(r; Employee=Randolph, Manager=Price, Job=Ticket Agent, Salary=$12,000.00, Years-Worked=0)
 ```
 
 ## Exercise 1.2
@@ -123,4 +123,26 @@ What can be said about a relation with a key $K = \emptyset$?
 > \lambda$ for any tuple $t$. Thus $t_1(\emptyset) = t_2(\emptyset)$ for any
 > tuples $t_1$ and $t_2$. If there exists two or more tuples in the relation,
 > then $K$ cannot be a key.
+
+## Exercise 1.7
+
+Let $K = \{ B_1, B_2, ..., B_m \}$ be a key of the relation scheme $R[A_1 A_2
+... A_n]$ and let $r$ be a relation on $R$. Consider the operation:
+
+```
+CHANGE(r; A₁ = d₁, A₂ = d₂, ... Aₙ = dₙ; B₁ = e₁, B₂ = e₂, ... Bₘ = eₘ).
+```
+
+Suppose that no tuple in $r$ has $K$-value $\langle e_1 e_2 ... e_m \rangle$,
+there is a tuple $\langle d_1 d_2 ... d_n \rangle$ in $r$, and that $e_i \in
+dom(B_i)$, $1 \leq i \leq m$. Is this change operation necessarily legal?
+
+> Yes, this change operation is necessarily legal.
+>
+> 1. The specified tuple $\langle d_1 d_2 ... d_n \rangle$ exists in $r$.
+> 2. The changes do not use values outside of the appropriate domain since $e_i
+>    \in dom(B_i)$, $1 \leq i \leq m$.
+> 3. The changed tuple does not have the same key value as a tuple already in
+>    the relation since no tuple in $r$ has $K$-value $\langle e_1 e_2 ... e_m
+>    \rangle$.
 
