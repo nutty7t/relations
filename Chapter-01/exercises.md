@@ -82,3 +82,12 @@ $d_5$." What are the keys of $R$?
 > - $\{$ `FLIGHT-NUMBER` $\}$
 > - $\{$ `DATE`, `GATE`, `TIME` $\}$
 
+## Exercise 1.3
+
+Let $t$ be a tuple in $r(R)$ and let $X$ and $Y$ be subsets of $R$. When does
+the expression $t(X)(Y)$ make sense? When it does make sense, how can it be
+simplified?
+
+> $t(X)(Y)$ only makes sense when $Y \subseteq X$. It can be simplified to
+> $t(Y)$.
+
