@@ -1,7 +1,7 @@
 ## Exercise 1.1
 
-**(a)** Let $R$ be the relation scheme `{ EMPLOYEE, MANAGER, JOB, SALARY,
-YEARS-WORKED }`, where `EMPLOYEE` and `MANAGER` are names. `JOB` is a title.
+**(a)** Let $R$ be the relation scheme $\{$ `EMPLOYEE`, `MANAGER`, `JOB`, `SALARY`,
+`YEARS-WORKED` $\}$, where `EMPLOYEE` and `MANAGER` are names. `JOB` is a title.
 `SALARY` is yearly salary, and `YEARS-WORKED` is the number of complete years
 the employee has been at the job. Construct a relation on $R$ based on the
 following information.
@@ -67,4 +67,18 @@ now the domain of the JOB attribute does not contain atomic values.
 ```
 ADD (R; Employee=Randolph, Manager=Price, Job=Ticket Agent, Salary=$12,000.00, Years-Worked=0)
 ```
+
+## Exercise 1.2
+
+Consider the relation scheme $R = \{$ `FLIGHT-NUMBER`, `DATE`, `GATE`, `TIME`,
+`DESTINATION` $\}$. A tuple $\langle d_1 d_2 d_3 d_4 d_5 \rangle$ of $r(R)$ has
+the meaning "flight $d_1$ departs on date $d_2$ from gate $d_3$ at $d_4$ for
+$d_5$." What are the keys of $R$?
+
+> *Assumptions:* At any date and time, there is at most one flight per gate. A
+> flight number uniquely identifies a $\{$ `DATE`, `GATE`, `TIME`,
+> `DESTINATION` $\}$, but not vice-versa.
+>
+> - $\{$ `FLIGHT-NUMBER` $\}$
+> - $\{$ `DATE`, `GATE`, `TIME` $\}$
 
