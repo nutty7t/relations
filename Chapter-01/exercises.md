@@ -114,3 +114,13 @@ $R$ can have? The maximum number of superkeys?
 > superkeys when each attribute in $R$ can uniquely identify all tuples in $R$
 > and when there are less than two tuples in the relation.
 
+## Exercise 1.6
+
+What can be said about a relation with a key $K = \emptyset$?
+
+> There are less than two tuples in that relation. That is because there is an
+> assumption that there is some value $\lambda$ such that $t(\emptyset) =
+> \lambda$ for any tuple $t$. Thus $t_1(\emptyset) = t_2(\emptyset)$ for any
+> tuples $t_1$ and $t_2$. If there exists two or more tuples in the relation,
+> then $K$ cannot be a key.
+
