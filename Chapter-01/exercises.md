@@ -105,3 +105,12 @@ simplified?
 > = \{$ `DATE`, `GATE`, `TIME` $\}$. Both $K_1$ and $K_2$ are superkeys, but
 > $K_1 \cap K_2 = \{$ `DATE` $\}$, which does not uniquely identify tuples.
 
+## Exercise 1.5*
+
+Given a relation scheme $R[A_1 A_2 ... A_n]$, what is the maximum number of keys
+$R$ can have? The maximum number of superkeys?
+
+> $R$ can have a maximum of $n$ keys and a maximum of $|\mathcal{P}(R)|$
+> superkeys when each attribute in $R$ can uniquely identify all tuples in $R$
+> and when there are less than two tuples in the relation.
+
